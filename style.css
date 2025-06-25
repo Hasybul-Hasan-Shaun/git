@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+nav a{
+   padding: 0 14px; 
+}
+
+a:hover{
+    color: rgba(0, 0, 0, 0.425);
+    transition: all 0.5s;
+}

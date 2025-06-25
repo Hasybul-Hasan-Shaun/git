@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jordan</title>
+  </head>
+  <body class="bg-black">
+    <div>
+      <header class="h-[80px] w-full bg-[#fff]">
+        <nav class="h-full w-full flex items-center justify-between">
+          <div class="flex items-center lg:ml-28 px-3">
+            <img src="Vector-1.png" alt="" class="md:w-[150px] w-[100px] text-white" />
+            <h1 class="italic font-extrabold text-2xl">SHOWS</h1>
+          </div>
+          <div class=" text-2xl font-semibold px-3 lg:mr-28  hidden md:block">
+            <a href="">Home</a>
+            <a href=""> Collection</a>
+            <a href="">About</a>
+            <a href="">Section</a>
+          </div>
+          <div class="md:hidden px-5 ">
+            <i id="hamburger" class="fa-solid fa-bars-staggered text-3xl cursor-pointer"></i>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed top-0 left-0 h-full w-full bg-white md:hidden shadow-lg z-50 transform -translate-x-full transition-transform duration-300">
+      <div class="flex flex-col p-8 space-y-6">
+        <button id="closeSidebar" class="self-end text-2xl">&times;</button>
+        <a href="#" class="text-black text-xl font-semibold">Home</a>
+        <a href="#" class="text-black text-xl font-semibold">Collection</a>
+        <a href="#" class="text-black text-xl font-semibold">About</a>
+        <a href="#" class="text-black text-xl font-semibold">Section</a>
+      </div>
+    </div>
+
+
+
+<!-- side bar -->
+    <div class=" py-10 px-5 lg:px-28 lg:py-[120px]  text-white lg:flex items-center justify-between w-full h-full">
+        <div class="lg:w-[50%]">
+       <h1 class="uppercase text-4xl lg:text-8xl font-bold italic  " id="show-title" >air jordan</h1>
+       <p class=" py-4 lg:py-6 lg:text-5xl xl::text-6xl text-2xl " id="text-change">Air Jordan Legacy 310 Low</p>
+       <p class="py-3 lg:py-6 lg:text-5xl text-2xl" id="price">140$</p>
+       <p class=" py-3 hidden lg:block lg:py-6 md:text-xl text-[18px] text-start ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure doloremque minus facilis fugit iste id beatae tempore suscipit deleniti magni reprehenderit fugiat qui laborum delectus, tempora recusandae aperiam amet hic atque? Expedita dignissimos nesciunt nemo necessitatibus, eum itaque incidunt facere ullam recusandae quas. Itaque, sapiente sint? Maxime nisi nulla consequuntur?</p>
+       <div class="lg:flex items-center hidden">
+        <button class=" h-[50px] md:h-[80px] w-[200px] rounded bg-amber-500 md:text-2xl mt-8 lg:mt-14 text-xl md:rounded-full font-semibold text-center">Add To Card</button>
+        <button class=" h-[50px] md:h-[80px] w-[200px]  lg:block rounded bg-amber-500 md:text-2xl mt-8 lg:mt-14 text-xl md:rounded-full font-semibold text-center ml-3.5" onclick="changeShows()">Change Shows</button>
+       </div>
+   
+        </div>
+
+        <div class="relative lg:w-[48%] h-full mt-10 lg:mt-0">
+          
+                <div class="lg:h-[45px] h-[25px] hidden md:block lg:block w-full bg-[#ddd] absolute top-0 left-0 rounded-full blur-md rotate-150 lg:rotate-160">
+
+                </div>
+                <img src="jordan.webp" alt="" class="w-full h-[100%] " id="show-img">
+                <div class="xl:h-[45px] h-[30px] w-full  bg-[#ddd] absolute bottom-0 left-0 rounded-full blur-md ">
+              
+                </div>
+              
+            
+        </div>
+
+        <div class="flex items-center lg:hidden">
+          <button class=" h-[50px] md:h-[80px] w-[200px] rounded bg-amber-500 md:text-2xl mt-8 lg:mt-14 text-xl md:rounded-full font-semibold text-center">Add To Card</button>
+          <button class=" h-[50px] md:h-[80px] w-[200px]  lg:block rounded bg-amber-500 md:text-2xl mt-8 lg:mt-14 text-xl md:rounded-full font-semibold text-center ml-3.5" onclick="changeShows()">Change Shows</button>
+         </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script >
+
+const noChange = [
+
+
+    {
+      title: "AIR  JORDAN ",
+      Name: "Yellow Jordan Legacy 210 Hei",
+      price: "$500 US",
+      img: "yellow.png",
+      background: "#facc15",
+      color:"red"
+    },
+    {
+      title: "AIR  JORDAN ",
+      Name: "Red Jordan Legacy 100 Hei",
+      price: "$200 US",
+      img: "red.png",
+      background: "#ef4444"
+    }
+    ,
+   {
+        title: "AIR  JORDAN ",
+        Name: "Green Jordan Legacy 510 Hei",
+        price: "$100 US",
+        img: "green.png",
+        background: "green"
+      }
+  ];
+  
+  let currentIndex = 0;
+  
+  function changeShows() {
+    currentIndex = (currentIndex + 1) % noChange.length;
+    const shows = noChange[currentIndex];
+  
+    // Image fade out
+    gsap.from("#show-img", {
+      opacity: 0,
+      x:500,
+      duration: 0.5,
+      onComplete: () => {
+        document.getElementById("show-img").src = shows.img;
+  
+        // Image fade in
+        gsap.to("#show-img", { opacity: 1, duration: 0.5 });
+      }
+    });
+  
+    // Background color
+    gsap.to("body", {
+      backgroundColor: shows.background,
+      duration: 0.5
+    });
+//   color?
+
+
+    // Text fade out
+    gsap.from("#show-title", { opacity: 0, x:-200, duration: 0.5 });
+    gsap.from("#text-change", { opacity: 0,x:200, duration: 0.6 });
+    gsap.from("#price", {
+      opacity: 0,
+      y:-100,
+      duration: 0.5,
+      onComplete: () => {
+        // Update text
+        document.getElementById("show-title").innerText = shows.title;
+        document.getElementById("text-change").innerText = shows.Name;
+        document.getElementById("price").innerText = shows.price;
+  
+        // Fade in text
+        gsap.to("#show-title", { opacity: 1, duration: 0.3 });
+        gsap.to("#text-change", { opacity: 1, duration: 0.3 });
+        gsap.to("#price", { opacity: 1, duration: 0.3 });
+  }
+  });
+  }
+
+  
+  function Shows() {
+    currentIndex = (currentIndex + 1) % noChange.length;
+    const shows = noChange[currentIndex];
+  
+    // Image fade out
+    gsap.from("#show-img", {
+      opacity: 0,
+      x:500,
+      duration: 0.3,
+      onComplete: () => {
+        document.getElementById("show-img").src = shows.img;
+  
+        // Image fade in
+        // gsap.to("#show-img", { opacity: 1, duration: 0.3 });
+      }
+    });
+  
+    // Background color
+    gsap.to("body", {
+      backgroundColor: shows.background,
+      duration: 0.5
+    });
+  
+    // Text fade out
+   
+      onComplete: () => {
+        // Update text
+        document.getElementById("show-title").innerText = shows.title;
+        document.getElementById("text-change").innerText = shows.Name;
+        document.getElementById("price").innerText = shows.price;
+  
+  }
+  }
+const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebar');
+const closeSidebar = document.getElementById('closeSidebar');
+
+hamburger.addEventListener('click', () => {
+  gsap.to(sidebar, { x: 256, duration: 0 }); // Reset position
+  gsap.to(sidebar, { x: 0, duration: 0.5, });
+  sidebar.classList.remove('-translate-x-full');
+});
+
+closeSidebar.addEventListener('click', () => {
+  gsap.to(sidebar, { x: -256, duration: 0.5, ease: 'power3.in', onComplete: () => {
+    sidebar.classList.add('-translate-x-full');
+    gsap.set(sidebar, { x:-1000 });
+  }});
+});
+  
+
+    </script>
+  </body>
+</html>
